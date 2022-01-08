@@ -1,12 +1,19 @@
 /*
-	Asymmetric-key Cryptography
+	Asymmetric-key Cryptography or Public key Cryptography
 
 	Encryption
-	plain text  ------> cipher + public key  -------> cipher text
+	plaintext  ------> cipher + public key  -------> ciphertext
 	
 	Decryption
-	cipher text ------> cipher + private key -------> plain text
+	ciphertext ------> cipher + private key -------> plaintext
 
+	ciphers: RSA, Diffie-Hellman
+
+	RSA
+	RSA can be used to encrypt and decrypt actual messages, it is
+	very slow if the message is long. RSA, therefore, is useful for
+	short messages, encryption or decrypting symmetric key across 
+	or signing certs
 */
 
 const {
@@ -36,12 +43,12 @@ function generateKeyPairs() {
 	};
 }
 
-function encrypt(plainText, publicKey) {
-	return publicEncrypt(publicKey, Buffer.from(plainText)).toString("hex");
+function encrypt(plaintext, publicKey) {
+	return publicEncrypt(publicKey, Buffer.from(plaintext)).toString("hex");
 }
 
-function decrypt(cipherText, privateKey) {
-	return privateDecrypt(privateKey, Buffer.from(cipherText, "hex")).toString(
+function decrypt(ciphertext, privateKey) {
+	return privateDecrypt(privateKey, Buffer.from(ciphertext, "hex")).toString(
 		"utf8"
 	);
 }

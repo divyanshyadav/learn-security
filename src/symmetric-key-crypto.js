@@ -3,24 +3,25 @@
 	shared secret key
 
 	Encryption
-	plain text  -----> Cipher + secret key -------> cipher text
+	plaintext  -----> Cipher + secret key -------> ciphertext
 
 	Decryption
-	cipher text -----> cipher + secret key -------> plain text
+	ciphertext -----> cipher + secret key -------> plaintext
 
+	ciphers: DES, AES(128 bits, 192 bits, 256bits)
 */
 
 const { createCipheriv, randomBytes, createDecipheriv } = require("crypto");
 
-function encrypt(plainText, secretKey, iv) {
+function encrypt(plaintext, secretKey, iv) {
 	const cipher = createCipheriv("aes256", secretKey, iv);
-	cipher.update(plainText, "utf8", "hex");
+	cipher.update(plaintext, "utf8", "hex");
 	return cipher.final("hex");
 }
 
-function decrypt(cipherText, secretKey, iv) {
+function decrypt(ciphertext, secretKey, iv) {
 	const cipher = createDecipheriv("aes256", secretKey, iv);
-	cipher.update(cipherText, "hex", "utf8");
+	cipher.update(ciphertext, "hex", "utf8");
 	return cipher.final("utf8");
 }
 
