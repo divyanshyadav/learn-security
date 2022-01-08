@@ -7,10 +7,6 @@
 - Hash
 - Salt
 - Hmac
-- Symmetric Encryption
-- Asymmetric Encryption
+- Symmetric Key Crypto
+- Asymmetric Key Crypto
 - Sign
-
-## References
-
-https://www.youtube.com/watch?v=NuyzuNBFWxQ

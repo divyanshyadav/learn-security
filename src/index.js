@@ -25,12 +25,13 @@ encMessage = encrypt(message, key, iv);
 decMessage = decrypt(encMessage, key, iv);
 console.log(decMessage === message);
 
+// Asymmetric Key Crypto Example
 const asymmetric = require("./asymmetric-key-crypto");
 const { publicKey, privateKey } = asymmetric.generateKeyPairs();
-message = "hello there again!!";
-encMessage = asymmetric.encrypt(message, publicKey);
-depMessage = asymmetric.decrypt(encMessage, privateKey);
-console.log(depMessage === message);
+plaintext = "hello there again!!";
+ciphertext = asymmetric.encrypt(plaintext, publicKey);
+samePlaintext = asymmetric.decrypt(ciphertext, privateKey);
+console.log(plaintext === samePlaintext);
 
 const { sign, verify } = require("./sign");
 const signature = sign(message, privateKey);
