@@ -25,12 +25,12 @@ function generateKeyPairs() {
 	};
 }
 
-function encrypt(message, publicKey) {
-	return publicEncrypt(publicKey, Buffer.from(message)).toString("hex");
+function encrypt(plainText, publicKey) {
+	return publicEncrypt(publicKey, Buffer.from(plainText)).toString("hex");
 }
 
-function decrypt(message, privateKey) {
-	return privateDecrypt(privateKey, Buffer.from(message, "hex")).toString(
+function decrypt(cipherText, privateKey) {
+	return privateDecrypt(privateKey, Buffer.from(cipherText, "hex")).toString(
 		"utf8"
 	);
 }

@@ -2,8 +2,8 @@
 
 const { createHmac } = require("crypto");
 
-function hmac(message, key) {
-	return createHmac("sha256", key).update(message).digest("hex");
+function hmac(plainText, key) {
+	return createHmac("sha256", key).update(plainText).digest("hex");
 }
 
 module.exports = {
