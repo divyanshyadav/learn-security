@@ -1,3 +1,11 @@
+/*
+	Asymmetric-key Cryptography
+
+	plain text  ------> encrypt + public key  -------> cipher text
+	cipher text ------> decrypt + private key -------> plain text
+
+*/
+
 const {
 	generateKeyPairSync,
 	publicEncrypt,

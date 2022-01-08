@@ -17,7 +17,7 @@ const hash1 = hmac(message, key);
 const hash2 = hmac(message, "123");
 console.log(hash1, hash2, hash1 === hash2);
 
-const { encrypt, decrypt } = require("./symmetric-encrypt");
+const { encrypt, decrypt } = require("./symmetric-key-crypto");
 message = "hello there!!";
 key = randomBytes(32);
 const iv = randomBytes(16);
@@ -25,7 +25,7 @@ encMessage = encrypt(message, key, iv);
 decMessage = decrypt(encMessage, key, iv);
 console.log(decMessage === message);
 
-const asymmetric = require("./asymmetric-encrypt");
+const asymmetric = require("./asymmetric-key-crypto");
 const { publicKey, privateKey } = asymmetric.generateKeyPairs();
 message = "hello there again!!";
 encMessage = asymmetric.encrypt(message, publicKey);
