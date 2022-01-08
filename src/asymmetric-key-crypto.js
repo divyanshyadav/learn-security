@@ -1,8 +1,11 @@
 /*
 	Asymmetric-key Cryptography
 
-	plain text  ------> encrypt + public key  -------> cipher text
-	cipher text ------> decrypt + private key -------> plain text
+	Encryption
+	plain text  ------> cipher + public key  -------> cipher text
+	
+	Decryption
+	cipher text ------> cipher + private key -------> plain text
 
 */
 

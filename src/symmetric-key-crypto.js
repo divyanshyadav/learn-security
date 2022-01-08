@@ -2,8 +2,11 @@
 	Symmetric-key Cryptography
 	shared secret key
 
-	plain text  -----> Encryption -------> cipher text
-	cipher text -----> Decryption -------> plain text
+	Encryption
+	plain text  -----> Cipher + secret key -------> cipher text
+
+	Decryption
+	cipher text -----> cipher + secret key -------> plain text
 
 */
 
