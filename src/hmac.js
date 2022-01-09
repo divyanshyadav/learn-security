@@ -1,9 +1,13 @@
-// Hash bases message authentication code
+/*
+	Hash bases message authentication code(MAC)
 
+	* MAC uses keyed hash function to create digest.
+
+*/
 const { createHmac } = require("crypto");
 
-function hmac(plainText, key) {
-	return createHmac("sha256", key).update(plainText).digest("hex");
+function hmac(message, key) {
+	return createHmac("sha256", key).update(message).digest("hex");
 }
 
 module.exports = {

@@ -15,11 +15,13 @@
 
 ### Message Confidentiality
 
-To achieve message confidentiality we can either use symmetric-key or asymmetric-key cryptography
+To achieve message confidentiality we can either use symmetric-key or asymmetric-key cryptography.
 
 For long messages symmetric-key cryptography is much more efficient than the asymmetric-key cryptography. Mostly only for the symmetric key exchange we use asymmetric key cryptography.
 
 ### Message Integrity
+
+To achieve message integrity we can use hash function to create a compressed image of the message. So the receiver can create the hash again of the message and compare it with the received hash to check if there is any change in the message.
 
 ### Message Authentication
 
