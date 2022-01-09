@@ -33,6 +33,6 @@ ciphertext = asymmetric.encrypt(plaintext, publicKey);
 samePlaintext = asymmetric.decrypt(ciphertext, privateKey);
 console.log(plaintext === samePlaintext);
 
-const { sign, verify } = require("./sign");
+const { sign, verify } = require("./digital-signature");
 const signature = sign(message, privateKey);
 console.log("Is signature valid", verify(message, signature, publicKey));
