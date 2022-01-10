@@ -31,3 +31,8 @@ Two methods to achieve message authentication.
 2. Use Digital Signature which is internally using asymmetric key cryptography.
 
 ### Message Nonrepudiation
+
+## References
+
+- Data Communications and Networking By Behrouz A.Forouzan
+- https://www.youtube.com/watch?v=NuyzuNBFWxQ
