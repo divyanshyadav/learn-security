@@ -38,6 +38,12 @@ Can be achieve using trusted third party.
 
 ### Entity Authentication
 
+Entity authentication is a technique designed to let one party prove the identity of the another party. Entity can be a person, a process, a client or a server.
+
+The entity whose authenticity needs to be proved is called claimant.
+
+The Party that tries to prove the identity of the claimant is called verifier.
+
 ## References
 
 - Data Communications and Networking By Behrouz A.Forouzan
