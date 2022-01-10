@@ -23,14 +23,20 @@ For long messages symmetric-key cryptography is much more efficient than the asy
 
 To achieve message integrity we can use hash function to create a compressed image of the message. So the receiver can create the hash again of the message and compare it with the received hash to check if there is any change in the message.
 
+Digital signature can also provide message integrity.
+
 ### Message Authentication
 
 Two methods to achieve message authentication.
 
-1. Use keyed hash function to create a message digest which is also known as HMAC(Hash Message Authentication Code).
-2. Use Digital Signature which is internally using asymmetric key cryptography.
+1. keyed hash function to create a message digest which is also known as HMAC(Hash Message Authentication Code).
+2. Digital Signature which is internally using asymmetric key cryptography.
 
 ### Message Nonrepudiation
+
+Can be achieve using trusted third party.
+
+### Entity Authentication
 
 ## References
 

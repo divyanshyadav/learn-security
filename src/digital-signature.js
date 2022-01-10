@@ -1,3 +1,12 @@
+/*
+	Signing
+	messages -----> hash + private key ------> signature
+
+	Verifying
+	message, signature ------> signature + public key ------> hash === newly computed hash 
+
+*/
+
 const { createSign, createVerify } = require("crypto");
 
 function sign(message, privateKey) {
