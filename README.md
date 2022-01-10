@@ -9,7 +9,7 @@
 - Hmac
 - Symmetric Encryption
 - Asymmetric Encryption
-- Digital Signature
+- Signing
 
 ## Security Services
 
