@@ -1,16 +1,16 @@
 const { createSign, createVerify } = require("crypto");
 
-function sign(plainText, privateKey) {
+function sign(message, privateKey) {
 	const signer = createSign("rsa-sha256");
-	signer.update(plainText);
+	signer.update(message);
 
 	const signature = signer.sign(privateKey, "hex");
 	return signature;
 }
 
-function verify(plainText, signature, publicKey) {
+function verify(message, signature, publicKey) {
 	const verifier = createVerify("rsa-sha256");
-	verifier.update(plainText);
+	verifier.update(message);
 
 	return verifier.verify(publicKey, signature, "hex");
 }
