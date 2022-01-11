@@ -44,6 +44,17 @@ The entity whose authenticity needs to be proved is called claimant.
 
 The Party that tries to prove the identity of the claimant is called verifier.
 
+Can be done by Challenge-Response method which can be done by either using symmetric-key cipher,asymmetric-key cipher, keyed-hash function or digital signature.
+
+## Key Management
+
+How secret keys in symmetric cryptography and public keys in asymmetric cryptography are distributed and maintained.
+
+### Symmetric-key Distribution
+
+- Key Distribution Center (KDC) or trusted party
+  - Kerberos - Is an authentication protocol and KDC
+
 ## References
 
 - Data Communications and Networking By Behrouz A.Forouzan
