@@ -28,6 +28,7 @@ console.log(decMessage === message);
 // Asymmetric Key Crypto Example
 const asymmetric = require("./asymmetric-encryption");
 const { publicKey, privateKey } = asymmetric.generateKeyPairs();
+console.log(publicKey, privateKey);
 plaintext = "hello there again!!";
 ciphertext = asymmetric.encrypt(plaintext, publicKey);
 samePlaintext = asymmetric.decrypt(ciphertext, privateKey);
