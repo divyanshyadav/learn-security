@@ -1,12 +1,16 @@
 const fs = require("fs");
 const https = require("https");
 const express = require("express");
+
+const PORT = 3443;
+
 const {
 	generateCertificateAndSave,
 	generateKeyPairsAndSave,
 } = require("./cert-utils");
 
 if (!fs.existsSync("certs")) {
+	console.log("Creating certs");
 	fs.mkdirSync("certs");
 	generateKeyPairsAndSave("certs");
 	generateCertificateAndSave("certs", "certs/public.pem", "certs/private.pem");
@@ -25,6 +29,6 @@ const sslServer = https.createServer(
 	app
 );
 
-sslServer.listen(443, () => {
-	console.log("Listening on port 443");
+sslServer.listen(PORT, () => {
+	console.log(`Listening on port ${PORT}`);
 });
